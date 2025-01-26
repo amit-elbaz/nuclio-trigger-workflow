@@ -16,7 +16,7 @@ spec:
   source: git://github.com/amit-elbaz/nuclio-trigger-workflow.git#master
   workflows:
   - name: my-workflow
-    path: ./../workflows/workflow.py
+    path: workflows/workflow.py
   conda: ''
   origin_url: git@github.com:amit-elbaz/nuclio-trigger-workflow.git#refs/heads/master
 metadata:
