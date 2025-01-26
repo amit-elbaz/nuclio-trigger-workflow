@@ -1,0 +1,22 @@
+spec:
+  functions:
+  - url: functions/my_job.py
+    name: func-a
+    kind: job
+    image: mlrun/mlrun
+    handler: func_A
+  - url: functions/my_nuclio.py
+    name: my-nuc-func
+    kind: nuclio
+    image: mlrun/mlrun
+    handler: handler
+  desired_state: online
+  source: git@github.com:amit-elbaz/nuclio-trigger-workflow.git#refs/heads/master
+  workflows:
+  - name: my-workflow
+    path: workflows/workflow.py
+  conda: ''
+  origin_url: git@github.com:amit-elbaz/nuclio-trigger-workflow.git#refs/heads/master
+metadata:
+  name: nuclio-trigger-workflow-amite
+kind: project
