@@ -5,13 +5,15 @@ spec:
     kind: job
     image: mlrun/mlrun
     handler: func_A
-  - url: functions/my_nuclio.py
-    name: my-nuc-func
+    with_repo: true
+  - name: my-nuc-func
     kind: nuclio
     image: mlrun/mlrun
-    handler: handler
+    handler: functions.my_nuclio:handler
+    with_repo: true
   desired_state: online
-  source: git@github.com:amit-elbaz/nuclio-trigger-workflow.git#refs/heads/master
+  load_source_on_run: true
+  source: git://github.com/amit-elbaz/nuclio-trigger-workflow.git#master
   workflows:
   - name: my-workflow
     path: workflows/workflow.py
