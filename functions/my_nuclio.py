@@ -1,8 +1,7 @@
 import mlrun
 
 def init_context(context):
-    # project = mlrun.load_project(url="git://github.com/amit-elbaz/nuclio-trigger-workflow.git#master", context="./my-loaded-project")
-    project = mlrun.get_or_create_project("nuclio-trigger-workflow-amite", "./my-loaded-project", clone=True)
+    project = mlrun.load_project(url="git://github.com/amit-elbaz/nuclio-trigger-workflow.git#master", context="./my-loaded-project")
     setattr(context,"project",project)
     
 def handler(context, event):
