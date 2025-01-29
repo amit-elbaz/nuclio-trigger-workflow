@@ -1,7 +1,7 @@
 # import mlrun
 import sys
 sys.path.append("/opt/nuclio")
-from util import utility_func
+from util.utility import utility_func
 # def init_context(context):
 #     context.logger.info("start init context")
 #     project = mlrun.load_project(url="git://github.com/amit-elbaz/nuclio-trigger-workflow.git#master", context="./my-loaded-project")
