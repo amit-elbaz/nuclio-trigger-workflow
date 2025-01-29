@@ -1,4 +1,4 @@
-# import mlrun
+import mlrun
 import sys
 sys.path.append("/opt/nuclio")
 from util.utility import utility_func
