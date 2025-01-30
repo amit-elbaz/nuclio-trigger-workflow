@@ -1,6 +1,6 @@
 spec:
   functions:
-  - url: functions/my_job.py
+  - url: src/functions/my_job.py
     name: func-a
     kind: job
     image: mlrun/mlrun
