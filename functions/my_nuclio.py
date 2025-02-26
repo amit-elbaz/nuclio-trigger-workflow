@@ -10,8 +10,8 @@ from util.utility import utility_func
 
 #     setattr(context,"project",project)
     
-def handler(context, event):
-    context.logger.info("start handler")
+def handler(event):
+    # context.logger.info("start handler")
     
     # project = mlrun.get_or_create_project("nuclio-trigger-workflow-amite", "./")
     # workflow_instance = context.project.run(name="my-workflow", engine="remote")
