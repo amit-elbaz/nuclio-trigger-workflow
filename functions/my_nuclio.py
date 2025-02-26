@@ -10,7 +10,7 @@ import mlrun
 
 #     setattr(context,"project",project)
     
-def handler(event):
+def test(event):
     # context.logger.info("start handler")
     
     # project = mlrun.get_or_create_project("nuclio-trigger-workflow-amite", "./")
