@@ -21,15 +21,3 @@ def test(event):
     # return utility_func()
     # workflow_instance = project.run(workflow_path="/opt/nuclio/workflows/workflow.py")
     
-
-
-
-from mlrun.runtimes import nuclio_init_hook
-
-
-def init_context(context):
-    nuclio_init_hook(context, globals(), "serving_v2")
-
-
-def handler(context, event):
-    return context.mlrun_handler(context, event)
