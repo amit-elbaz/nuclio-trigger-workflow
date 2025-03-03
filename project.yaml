@@ -11,6 +11,11 @@ spec:
     image: mlrun/mlrun
     handler: functions.my_nuclio:handler
     with_repo: true
+  - url: ./function/my_nuclio.py
+    name: my-serving-func
+    kind: serving
+    image: mlrun/mlrun
+    with_repo: true
   desired_state: online
   load_source_on_run: true
   source: git://github.com/amit-elbaz/nuclio-trigger-workflow.git#master
