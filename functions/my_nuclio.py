@@ -13,8 +13,8 @@ from util.utility import utility_func
 def test(event):
     # context.logger.info("start handler")
     
-    # project = mlrun.get_or_create_project("nuclio-trigger-workflow-amite", "./")
-    # workflow_instance = context.project.run(name="my-workflow", engine="remote")
+    project = mlrun.get_or_create_project("serving-that-triggers-workflow-amite", "./")
+    workflow_instance = project.run(name="my-workflow", engine="remote")
     # workflow_instance = context.project.run(name="my-workflow", watch=False, engine="kfp", dirty=True)
     # job = context.project.run_function("func-a")
     # return 1
