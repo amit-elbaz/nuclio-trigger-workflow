@@ -2,6 +2,7 @@ import mlrun
 # # import sys
 # # sys.path.append("/opt/nuclio")
 from util.utility import utility_func
+import os
 
 # # def init_context(context):
 # #     context.logger.info("start init context")
@@ -12,7 +13,7 @@ from util.utility import utility_func
     
 def test(event):
     # context.logger.info("start handler")
-    
+    print(os.getcwd())
     project = mlrun.get_or_create_project("serving-that-triggers-workflow-amite", "./")
     workflow_instance = project.run(name="my-workflow", engine="remote")
     # workflow_instance = context.project.run(name="my-workflow", watch=False, engine="kfp", dirty=True)
