@@ -1,7 +1,7 @@
 # import mlrun
 # # import sys
 # # sys.path.append("/opt/nuclio")
-# # from util.utility import utility_func
+from util.utility import utility_func
 
 # # def init_context(context):
 # #     context.logger.info("start init context")
@@ -17,7 +17,7 @@ def test(event):
     # workflow_instance = context.project.run(name="my-workflow", engine="remote")
     # workflow_instance = context.project.run(name="my-workflow", watch=False, engine="kfp", dirty=True)
     # job = context.project.run_function("func-a")
-    return 1
-    # return utility_func()
+    # return 1
+    return utility_func()
     # workflow_instance = project.run(workflow_path="/opt/nuclio/workflows/workflow.py")
     
